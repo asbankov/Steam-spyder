@@ -82,7 +82,7 @@ class SteamgamespiderSpider(scrapy.Spider):
             items['reviewsQuantity'] = re.search(r'(?<=the )[\d,]+', reviewDescr[0].extract()).group(0)
         if bool(re.search(r'\d\d\d\d', items['date'])):
             if int(re.search(r'\d\d\d\d', items['date']).group(0)) >= 2000:
-                print(int(re.search(r'\d\d\d\d', items['date']).group(0)))
+                #print(int(re.search(r'\d\d\d\d', items['date']).group(0)))
                 yield items 
         elif items['date'] != '':
             yield items
